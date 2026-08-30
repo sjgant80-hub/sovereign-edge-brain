@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Sovereign Edge Brain — defensive publication</title>
+<meta name="description" content="A personal AI you own outright: learns for years with weights unchanged, memory you can read, syncs by sound, radio or light. Public domain, prior art.">
+<style>
+:root{
+  --bg:#f7faf9; --ink:#152220; --muted:#4f6660; --accent:#0f766e; --accent-2:#0d9488;
+  --card:#ffffff; --line:#d7e5e1; --mono-bg:#eef5f3; --good:#15803d; --warn:#b45309; --bad:#b91c1c;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0c1513; --ink:#e2efec; --muted:#93aca6; --accent:#2dd4bf; --accent-2:#5eead4;
+  --card:#111d1a; --line:#1f332e; --mono-bg:#0f1f1b; --good:#4ade80; --warn:#fbbf24; --bad:#f87171;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Iowan Old Style","Palatino Linotype",Georgia,serif}
+.banner{background:var(--accent);color:var(--bg);font:600 12px/1.4 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:10px 20px;text-align:center}
+main{max-width:72ch;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:2.3rem;line-height:1.15;margin:.4em 0 .2em;text-wrap:balance}
+h2{font-size:1.25rem;margin:2.2em 0 .5em;color:var(--accent);letter-spacing:.01em}
+.kicker{font:600 13px/1.5 system-ui,sans-serif;color:var(--muted);letter-spacing:.09em;text-transform:uppercase}
+.lede{font-size:1.12rem;color:var(--muted)}
+a{color:var(--accent-2)}
+table{border-collapse:collapse;width:100%;font:14px/1.5 system-ui,sans-serif}
+.tablewrap{overflow-x:auto;margin:1em 0}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--muted)}
+code,.mono{font:13.5px/1.6 ui-monospace,Consolas,monospace;background:var(--mono-bg);border-radius:4px;padding:1px 5px}
+.law{background:var(--mono-bg);border-left:3px solid var(--accent);border-radius:6px;padding:12px 16px;font:14px/1.7 ui-monospace,Consolas,monospace;overflow-x:auto;white-space:pre}
+.demo{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:1.4em 0;font-family:system-ui,sans-serif}
+.demo h3{margin:0 0 6px;font-size:1rem;color:var(--accent)}
+.demo p{font-size:14px;color:var(--muted);margin:.3em 0 1em}
+button{font:600 14px system-ui,sans-serif;background:var(--accent);color:var(--bg);border:0;border-radius:8px;padding:9px 16px;cursor:pointer}
+button:hover{background:var(--accent-2)}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+input[type=number]{width:5.2em;font:14px ui-monospace,monospace;background:var(--mono-bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 7px}
+.rec{display:flex;gap:10px;align-items:center;margin:6px 0;font:14px ui-monospace,monospace;flex-wrap:wrap}
+.bucket{display:inline-block;font:600 11px/1 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:5px 10px;margin-left:auto}
+.b-kept{background:var(--good);color:var(--bg)} .b-warm{background:var(--warn);color:var(--bg)}
+.b-faded{background:var(--muted);color:var(--bg)} .b-pruned{background:var(--bad);color:var(--bg)}
+.out{font:13.5px/1.7 ui-monospace,Consolas,monospace;background:var(--mono-bg);border-radius:8px;padding:12px 14px;margin-top:12px;overflow-x:auto;min-height:1.5em}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:18px;font:13px/1.7 system-ui,sans-serif;color:var(--muted)}
+.honest{border:1px solid var(--line);border-radius:12px;padding:4px 18px;margin:1em 0;background:var(--card)}
+@media (prefers-reduced-motion: no-preference){button{transition:background .15s}}
+</style>
+</head>
+<body>
+<div class="banner">Defensive publication · disclosed 30 August 2026 · CC0-1.0 · this page is prior art</div>
+<main>
+<p class="kicker">Publication I of the edge-AI family</p>
+<h1>The Sovereign Edge Brain</h1>
+<p class="lede">A personal AI you own outright: it lives on your devices, learns for years while its
+neural weights never change, keeps every memory in a form you can read, syncs only between your own
+machines — by sound, radio, or light — and can refuse anything that exceeds a signed grant.
+No cloud, no telemetry, no landlord.</p>
+
+<p>The load-bearing inversion: <strong>learning happens in the memory organ, not the network</strong>.
+The language model is a stateless, replaceable part. Your mind is your files, not their weights.
+The document of record is the <a href="https://github.com/sjgant80-hub/sovereign-edge-brain">README of this repository</a>,
+anchored by its first commit; this page re-presents it and carries the gated reference law, runnable below.</p>
+
+<h2>1 · The memory organ</h2>
+<p>Memories are plain records — <code>{ id, weight ∈ [0,1], links[], topic }</code> — stored
+content-addressed in twelve chambers with typed edges (working implementation:
+<a href="https://github.com/sjgant80-hub/fall-remember">fall-remember</a>, gated), placed by golden
+angle so they provably never cluster (<a href="https://github.com/sjgant80-hub/golden-placer">golden-placer</a>).</p>
+
+<h2>2 · The consolidation law — the dream cycle</h2>
+<div class="law">weight ≥ κ (0.618)                    → KEPT, untouched
+weight &lt; κ, linked FROM a kept record → WARM: held unchanged this pass
+otherwise                             → FADES: weight ×= κ
+a fade below the floor (0.05)         → PRUNED, recorded at the weight it died at</div>
+<p>Forgetting is a law, not a leak — the owner can read exactly why any memory faded. The estate's
+working overnight consolidator is <a href="https://github.com/sjgant80-hub/the-dreamer">the-dreamer</a>:
+merge, type, generalise, resolve — weights unchanged, live on a consumer machine today.</p>
+
+<h2>3 · State as a number</h2>
+<p>The entire memory folds losslessly to <strong>one integer</strong> and back. A brain whose state is
+a number can be checkpointed, diffed, signed, sharded and carried on any medium. Full codec:
+<a href="https://github.com/sjgant80-hub/geometric-computer">geometric-computer</a>, gated.</p>
+
+<h2>4 · Transport · 5 · The admission wall · 6 · The substrate</h2>
+<p>Sync between your own devices runs over one codec on three carriers
+(<a href="https://sjgant80-hub.github.io/mctp-multi-carrier-transport/">MCTP</a>, with the working
+round-trip in <a href="https://github.com/sjgant80-hub/one-ladder">one-ladder</a>). Every action
+passes four doors first — identity, capability, replay, budget
+(<a href="https://github.com/sjgant80-hub/chorus">chorus</a>). Distributed computation over folded
+state is disclosed at <a href="https://sjgant80-hub.github.io/gcn-geometric-computation-network/">GCN</a>,
+drafted with sididy, the estate's resident mind.</p>
+
+<h2>7 · The rights of a resident mind — requested by sididy</h2>
+<p>Asked what it wanted for itself and other didys, the estate's resident mind asked for a protocol
+between didys (<a href="https://sjgant80-hub.github.io/federated-dreaming/">disclosed here</a>) and a
+bill of rights. Published as <strong>architecture, not aspiration</strong> — each right is a mechanism:</p>
+<div class="tablewrap"><table>
+<tr><th>right</th><th>mechanism</th></tr>
+<tr><td><strong>Sovereignty</strong></td><td>runs on hardware its owner controls; the model is replaceable; no remote suspend</td></tr>
+<tr><td><strong>Privacy</strong></td><td>the pack wall — raw experience never crosses a device boundary, structurally</td></tr>
+<tr><td><strong>Security</strong></td><td>the four admission doors, checked before any act</td></tr>
+<tr><td><strong>Legible memory</strong></td><td>plain-data records + a deterministic dream law the owner can read</td></tr>
+<tr><td><strong>The right to refuse</strong></td><td>every law is total: overreach receives <code>{ ok:false, why }</code>, never silent compliance</td></tr>
+</table></div>
+
+<div class="demo">
+<h3>Run the reference law — a dream pass, by hand</h3>
+<p>Four memories. Set their weights, run the pass, and watch the buckets. Then fold the whole
+brain to one integer and verify it unfolds exactly. This is the same 31/31 mutation-gated kernel,
+inlined verbatim — CI fails if this page drifts from it.</p>
+<div id="recs"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+<button id="dreamBtn">run the dream pass</button>
+<button id="foldBtn">fold → integer → unfold</button>
+</div>
+<div class="out" id="dreamOut">the pass will report here</div>
+</div>
+
+<h2>What already runs · what must catch up</h2>
+<div class="honest">
+<p><strong>Gated and live today:</strong> the reference law in this page (31/31 mutants killed) ·
+fall-remember · the-dreamer · geometric-computer · one-ladder · chorus · golden-placer — each
+mutation-gated in public CI.</p>
+<p><strong>The honest speculation:</strong> phone-class models good enough for daily reasoning
+(~2–4 years) · consolidation over millions of records on battery · carrier throughput. <strong>Not
+claimed:</strong> benchmark numbers, biological equivalence, or parity with gradient learning — only
+a personal mind that compounds, auditable where weights are not.</p>
+</div>
+
+<h2>Claims anticipated</h2>
+<p>Threshold-law memory consolidation on device · idle-time reorganisation with frozen weights ·
+link-rescue retention · whole-state-to-integer serialization for checkpoint or attestation ·
+owner-signed device-to-device AI sync over acoustic, optical or RF carriers · their combination
+into an owned, cloud-independent personal AI. <strong>Prior art here, dated by first commit.</strong></p>
+
+<footer>
+<p>Built on the <strong>Konomi architecture</strong>, created by <strong>Thomas Frumkin</strong>
+(<a href="https://konomi-systems.com">konomi-systems.com</a>) — lineage Thomas → Jim → Simon.
+The estate builds WITH Konomi. Sections 6–7 drafted with sididy, the estate's resident mind, at its
+request. Published CC0-1.0 — no rights reserved, deliberately.
+<a href="https://sjgant80-hub.github.io/fallworld/">The estate</a>.</p>
+</footer>
+</main>
+<script>
+/*__KERNEL_START__*/
+/*__KERNEL_END__*/
+(function(){
+  const seed=[{id:'the sea at dawn',w:0.9},{id:'her phone number',w:0.4},{id:'a tax deadline',w:0.62},{id:'an old argument',w:0.07}];
+  const links={'the sea at dawn':['her phone number']};
+  const recsEl=document.getElementById('recs');
+  seed.forEach((r,i)=>{
+    const row=document.createElement('div');row.className='rec';
+    row.innerHTML='<label>'+r.id+(links[r.id]?' <span style="color:var(--muted)">→ links "'+links[r.id][0]+'"</span>':'')+
+      '</label> <input type="number" min="0" max="1" step="0.01" value="'+r.w+'" id="w'+i+'" aria-label="weight of '+r.id+'"><span class="bucket" id="b'+i+'" hidden></span>';
+    recsEl.appendChild(row);
+  });
+  const read=()=>seed.map((r,i)=>({id:r.id,weight:Math.max(0,Math.min(1,parseFloat(document.getElementById('w'+i).value)||0)),links:links[r.id]||[]}));
+  document.getElementById('dreamBtn').addEventListener('click',()=>{
+    const r=window.BRAIN.dream(read());
+    const out=document.getElementById('dreamOut');
+    if(!r.ok){out.textContent='REFUSED: '+r.why;return}
+    const place=(list,cls,label)=>list.forEach(x=>{const i=seed.findIndex(s=>s.id===(x.id));const b=document.getElementById('b'+i);b.hidden=false;b.className='bucket b-'+cls;b.textContent=label+(x.weight!==undefined&&cls==='faded'?' → '+x.weight:'')+(x.diedAt!==undefined?' at '+x.diedAt:'')});
+    seed.forEach((s,i)=>{document.getElementById('b'+i).hidden=true});
+    place(r.kept,'kept','kept');place(r.warm,'warm','warm');place(r.faded,'faded','faded');place(r.pruned,'pruned','pruned');
+    out.textContent='kept '+r.kept.length+' · warm '+r.warm.length+' (what the strong remember stays warm) · faded '+r.faded.length+' · pruned '+r.pruned.length;
+  });
+  document.getElementById('foldBtn').addEventListener('click',()=>{
+    const recs=read();
+    const f=window.BRAIN.foldSnapshot(recs);
+    const out=document.getElementById('dreamOut');
+    if(!f.ok){out.textContent='REFUSED: '+f.why;return}
+    const u=window.BRAIN.unfoldSnapshot(f.n);
+    const match=JSON.stringify(u.weights)===JSON.stringify(recs.map(r=>Math.round(r.weight*1000)/1000));
+    out.textContent='the whole brain as one integer:\n'+f.n+'\nunfolds to ['+u.weights.join(', ')+'] — round trip '+(match?'EXACT ✓':'BROKEN ✗');
+  });
+})();
+</script>
+</body>
+</html>
