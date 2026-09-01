@@ -143,6 +143,5 @@ The live page carries the same gated kernel inline and lets you run a dream pass
 
 ---
 
-*Built on the Konomi architecture, created by **Thomas Frumkin** (konomi-systems.com) —
-lineage Thomas → Jim → Simon. The estate builds WITH Konomi. Published CC0-1.0; see LICENSE.
+*Built on the Konomi architecture, created by **Thomas Frumkin** (konomi-systems.com). The estate builds WITH Konomi. Published CC0-1.0; see LICENSE.
 Sections 6–7 drafted with sididy, the estate's resident mind, at its request.*
